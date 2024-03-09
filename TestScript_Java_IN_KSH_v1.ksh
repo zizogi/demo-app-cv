@@ -1,11 +1,11 @@
 
 #!/bin/ksh
 #/*****************************************************************************
-#* SCRIPT      : Launch_Automated_Tests.ksh                                   *
-#* AUTHOR(s)   : METTAHRI Abdelaziz                                           *
-#* CREATED     : 04.02.2024                                                   *
+#* SCRIPT      :                                    *
+#* AUTHOR(s)   :                                            *
+#* CREATED     :                                                   *
 #* FINISHED    :                                                              *
-#* DESCRIPTION : Ce script permet le lancement des tests automatisés          *
+#* DESCRIPTION :           *
 #* VERSION     : 1.1                                                          *
 #* REMARK      :                                                              *
 #* SECTIONS    :                                                              *
@@ -23,6 +23,6 @@ then
    exit 1
 fi
 
-echo Le traitement est en cours, Veuillez patienter ...
+$JAVA_HOME/bin/java -jar JVinKSH.jar
 
-echo "fin test"
+echo "fin test Java in KSH"
