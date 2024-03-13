@@ -23,6 +23,6 @@ then
    exit 1
 fi
 
-$JAVA_HOME/bin/java -jar JVinKSH.jar
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar JVinKSH.jar
 
 echo "fin test Java in KSH"
