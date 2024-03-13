@@ -1,15 +1,12 @@
-package com.dsv.ATTool;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public class RunningSS {
  public static void main(String[] args) {
   Process p;
   try {
-   String[] cmd = { "ksh", "chmod 777 ./TestScript_KSH_v1OK.ksh;./TestScript_KSH_v1OK.ksh tester1"};
+   String[] cmd = { "ksh", "$JAVA_HOME/bin/jar xf JVinKSH.jar src/main/java/com/dsv/ATTool/TestScript_KSH_v1OK.ksh;cp src/main/java/com/dsv/ATTool/TestScript_KSH_v1OK.ksh ./TestScript_KSH_v1OK.ksh;rm -rf src;chmod 777 ./TestScript_KSH_v1OK.ksh;./TestScript_KSH_v1OK.ksh tester1;rm TestScript_KSH_v1OK.ksh"};
    p = Runtime.getRuntime().exec(cmd); 
    p.waitFor(); 
    BufferedReader reader=new BufferedReader(new InputStreamReader(
@@ -26,18 +23,4 @@ public class RunningSS {
    e.printStackTrace();
   }
  }
-
-/*
-        if (args.length < 1) {
-            System.err.println("Please provide an input!");
-            System.exit(0);
-        }
-        System.out.println(sha256hex(args[0]));
-
-    }
-*/
-
-    public static String sha256hex(String input) {
-        return DigestUtils.sha256Hex(input);
-    }
 }
