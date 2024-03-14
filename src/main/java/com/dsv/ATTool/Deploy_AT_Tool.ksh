@@ -27,7 +27,7 @@ fi
 echo "Debut deploiement"
 
 mv JVinKSH.jar JJVinKSH.jar_backup`date +"%d%m%Y%H%M%S"`.jar
-cp ../arch/JVinKSH.jar JVinKSH.jar
+cp ../lib/JVinKSH.jar JVinKSH.jar
 
 rm TestScript_Java_IN_KSH_v1.ksh
 $JAVA_HOME/bin/jar xf JVinKSH.jar src/main/java/com/dsv/ATTool/TestScript_Java_IN_KSH_v1.ksh
