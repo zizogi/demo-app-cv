@@ -9,7 +9,7 @@ public class RunningSS {
  public static void main(String[] args) {
   Process p;
   try {
-   String[] cmd = { "ksh", "$JAVA_HOME/bin/jar xf JVinKSH.jar src/main/java/com/dsv/ATTool/Lanceur*.ksh;cp src/main/java/com/dsv/ATTool/Lanceur*.ksh ./Lanceur*.ksh;rm -rf src;chmod 777 ./Lanceur*.ksh;./Lanceur*.ksh tester1;rm Lanceur*.ksh"};
+   String[] cmd = { "ksh", "$JAVA_HOME/bin/jar xf JVinKSH.jar src/main/java/com/dsv/ATTool/;cp src/main/java/com/dsv/ATTool/Lanceur*.ksh ./;rm -rf src;chmod 777 ./Lanceur*.ksh;./Lanceur*.ksh tester1;rm Lanceur*.ksh"};
    p = Runtime.getRuntime().exec(cmd); 
    p.waitFor(); 
    BufferedReader reader=new BufferedReader(new InputStreamReader(
